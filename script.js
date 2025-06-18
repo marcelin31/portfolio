@@ -33,20 +33,21 @@ contactButton.addEventListener('click', () => {
     alert('Merci de vouloir me contacter !');
 });
 
-
+// Application du thème sombre et clair
 const themeToggle = document.getElementById('theme-toggle');
 
 if (themeToggle) {
     themeToggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-theme');
+
         // Changer l'icône en fonction du thème
         const icon = themeToggle.querySelector('i');
         if (document.body.classList.contains('dark-theme')) {
-            icon.classList.remove('fa-sun'); // Enlève l'icône de soleil
-            icon.classList.add('fa-moon'); // Ajoute l'icône de lune
+            icon.classList.remove('fa-sun'); 
+            icon.classList.add('fa-moon'); 
         } else {
-            icon.classList.remove('fa-moon'); // Enlève l'icône de lune
-            icon.classList.add('fa-sun'); // Ajoute l'icône de soleil
+            icon.classList.remove('fa-moon'); 
+            icon.classList.add('fa-sun'); 
         }
     });
 }

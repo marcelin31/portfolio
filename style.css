@@ -6,6 +6,14 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+* {
+    box-sizing: border-box; 
+}
+img {
+    max-width: 100%; 
+    height: auto; 
+}
+
 body {
     background-color: #f8f9fa;
     color: #333;
@@ -252,11 +260,41 @@ nav ul li a:hover::after {
             url('IMG PORTFOLIO/iso.jpg') no-repeat center center/cover;
     }
 }
+
 .scrolling-text {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    color: #f8b400;
-    animation: scrollText 30s linear infinite;
+    font-size: 1.8rem; 
+    text-align: center; 
+    margin: 20px 0; 
+    position: relative; 
+    overflow: hidden; 
+}
+
+.highlight {
+    color: #f8b400; 
+    font-weight: bold; 
+    display: inline-block;
+    position: relative;
+    animation: slide 5s infinite; /* Animation de défilement */
+}
+
+/* Animation de défilement */
+@keyframes slide {
+    0% {
+        transform: translateY(100%); 
+    }
+    50% {
+        transform: translateY(0); 
+    }
+    100% {
+        transform: translateY(-100%); 
+    }
+}
+
+/* Responsivité du texte scrolling*/
+@media (max-width: 768px) {
+    .scrolling-text {
+        font-size: 1.5rem; 
+    }
 }
 
 @keyframes scrollText {
@@ -329,6 +367,10 @@ button a {
             margin: 0 auto;
             padding: 0 2rem;
             background-color: #2a3f54;
+            img {
+            max-width: 100%; 
+            height: auto; 
+}
         }
 
         .section-title {
