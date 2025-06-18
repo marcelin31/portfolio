@@ -16,6 +16,8 @@
 
     <body>
 
+        <div id="loader">Chargement...</div>
+
             <!-- header section__________ -->
         <div id="header"></div>
         <header>
@@ -24,17 +26,18 @@
                 <h4>KOTCHE K. Marcelin</h4>
             </div>
             <nav>
-                <ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    <i class="fas fa-bars"></i> <!-- Icône de menu -->
+                </div>
+                <ul class="nav-list">
                     <li><a href="Index.html">Accueil</a></li>
-                    <li><a href="#A propos">A propos</a></li>
+                    <li><a href="#moi">A propos</a></li>
                     <li><a href="#Compétences">Mes Compétences</a></li>
-                    <li><a href="#Ce que je fais">Mes Réalisations</a></li>
+                    <li><a href="#projets">Mes Réalisations</a></li>
                     <li><a href="#Contact">Contact</a></li>
                 </ul>
             </nav>
-            
             <a href="images/CV_KOTCHE_MARCELIN_MPN.pdf" class="cv-link" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> MON CV </a>
-
         </header>
 
         <!-- Réseaux sociaux -->
@@ -52,7 +55,7 @@
                 <h1>Enchanté</h1>
             <div class="buttons">
                 <button class="contact-button" onclick= "alert('Entrons en contact')"><a href="#Contact">Me Contacter</a></button>
-                <button class="projects-button"><a href="#Ce que je fais">Mes projets</a></button>
+                <button class="projects-button"><a href="#projets">Mes projets</a></button>
             </div>
                 
             </div>
@@ -60,7 +63,7 @@
 
         
         <!-- Section À propos de Moi -->
-        <section class="about-section" id="A propos">
+        <section class="about-section" id="moi">
             <h1 class="section-title">À propos de moi</h1>
             
             <div class="intro-content">
@@ -215,7 +218,7 @@
         </section>
 
         <!-- Mes projets-->
-        <Section class="my_projects" id="Ce que je fais">
+        <Section class="my_projects" id="projets">
             <h1>Mes projets</h1>
             <div class="projects-grid">
                 <div class="project-category platforms">
@@ -335,5 +338,8 @@
         </footer>
 
     </main>
+
+        <script src="script.js" defer></script>
+
     </body>
 </html>
