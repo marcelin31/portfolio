@@ -67,3 +67,32 @@ if (mobileMenu) {
         navList.classList.toggle('active'); // Bascule la classe active
     });
 }
+
+
+// Interaction des comptences en Dev web front end
+
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top <= (window.innerHeight - 100)
+    );
+  }
+
+  function animateSkills() {
+    const skills = document.querySelectorAll('.circular-skill');
+    skills.forEach(skill => {
+      if (isInViewport(skill) && !skill.classList.contains('animated')) {
+        skill.classList.add('animated');
+        const circle = skill.querySelector('circle:last-child');
+        const percent = parseInt(skill.querySelector('.percentage').textContent);
+        const radius = 50;
+        const circumference = 2 * Math.PI * radius;
+        const offset = circumference - (percent / 100 * circumference);
+        circle.style.strokeDashoffset = offset;
+      }
+    });
+  }
+
+  // Initialisation
+  window.addEventListener('scroll', animateSkills);
+  window.addEventListener('load', animateSkills);

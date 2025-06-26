@@ -699,6 +699,100 @@ button a {
     }
 }
 
+/* Competences en develloppement web front-end */
+
+.section-competences-code {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+
+  p{
+    padding-top: 50px;
+  }
+}
+
+.section-competences-code h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #0B1160;
+}
+
+.circular-skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.circular-skill {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circular-skill svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+  width: 120px;
+  height: 120px;
+}
+
+.circular-skill circle {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+.circular-skill circle:first-child {
+  stroke: #ddd;
+}
+
+.circular-skill.html circle:last-child {
+  stroke: #E44D26;
+  stroke-dasharray: 314;
+  stroke-dashoffset: calc(314 - (314 * 85 / 100));
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+.circular-skill.css circle:last-child {
+  stroke: #1572B6;
+  stroke-dasharray: 314;
+  stroke-dashoffset: calc(314 - (314 * 80 / 100));
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+.circular-skill.js circle:last-child {
+  stroke: #F7DF1E;
+  stroke-dasharray: 314;
+  stroke-dashoffset: calc(314 - (314 * 60 / 100));
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+.percentage {
+  margin-top: 45px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.circular-skill p {
+  margin-top: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+.circular-skill circle:last-child {
+  stroke-dasharray: 314;
+  stroke-dashoffset: 314;
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+
 /* Mes projets */
 
 .my_projects {
