@@ -81,7 +81,7 @@ nav {
 }
 
 .menu-toggle {
-    display: none; /* Masquer le bouton menu par défaut */
+    display: none; 
     cursor: pointer;
     font-size: 24px;
 }
@@ -246,10 +246,14 @@ nav ul li a:hover::after {
 
 @media (max-width: 768px) {
     .one {
+        background: 
+            linear-gradient(rgba(42, 63, 84, 0.85), rgba(42, 63, 84, 0.85)),
+            url('IMG PORTFOLIO/iso.jpg') no-repeat center center/cover;
         min-height: 60vh;
         background-attachment: scroll;
         background-size: contain;
         background-position: center top;
+        
     }
 }
 
